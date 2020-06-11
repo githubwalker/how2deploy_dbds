@@ -1,0 +1,20 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    restart: always
+    environment:
+      SA_PASSWORD: Very#Strong0
+      ACCEPT_EULA: Y
+    ports:
+     - 1433:1433
+    volumes:
+     #- ./volume:/var/lib/mysql
+     #mssql-server-linux-data:
+      - ./volumes/backups:/var/opt/mssql/backups
+      - ./volumes/sqlserver:/var/opt/sqlserver
+      - ./volumes/mssql:/var/opt/mssql
+        
