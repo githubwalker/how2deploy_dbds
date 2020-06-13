@@ -14,12 +14,12 @@ services:
       MYSQL_PASSWORD: 1111
     ports:
      - 3307:3306
-    volumes:
-            # - /home/andrew/PROJECTS/DOCKER_MYSQL/volume:/var/lib/mysql
-     - ./volume:/var/lib/mysql
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8083:8080
+       #volumes:
+            #     - ./volume:/var/lib/mysql
+
+# adminer:
+       #    image: adminer
+       #    restart: always
+       #    ports:
+       #      - 8083:8080
         

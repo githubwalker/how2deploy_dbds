@@ -12,8 +12,6 @@ services:
     ports:
      - 1433:1433
     volumes:
-     #- ./volume:/var/lib/mysql
-     #mssql-server-linux-data:
       - ./volumes/backups:/var/opt/mssql/backups
       - ./volumes/sqlserver:/var/opt/sqlserver
       - ./volumes/mssql:/var/opt/mssql
